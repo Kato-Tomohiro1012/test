@@ -1,0 +1,13 @@
+package jp.co.internous.action;
+
+public class Capsule {
+
+	public static void main(String[] args){
+
+		Person4 taro = new Person4("山田太郎",20);
+
+		System.out.println(taro.name);
+
+	}
+
+}
