@@ -6,15 +6,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
-import com.mysql.cj.xdevapi.Statement;
 
 /**
  * Servlet implementation class MySQLServlet
@@ -64,18 +62,18 @@ public class MySQLServlet extends HttpServlet {
 			rs.close();
 			stmt.close();
 		}catch (ClassNotFoundException e) {
-			out.println("ClassNotFoundException;" + e.getMassage());
+			out.println("ClassNotFoundException;" + e.getMessage());
 		}catch (SQLException e) {
-			out.println("SQLException:" + e.getMassage());
+			out.println("SQLException:" + e.getMessage());
 		}catch (Exception e) {
-			out.println("Exception:" + e.getMassage());
+			out.println("Exception:" + e.getMessage());
 		}finally {
 			try {
 				if (conn != null) {
 					conn.close();
 				}
 			}catch (SQLException e) {
-				out.println("SQLException:" + e.getMassage());
+				out.println("SQLException:" + e.getMessage());
 			}
 		}
 
