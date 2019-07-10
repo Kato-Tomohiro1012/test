@@ -28,9 +28,15 @@ public class LoginAction extends ActionSupport{
 	public String getName(){
 		return name;
 	}
-	public String setPassword(){
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword(){
 		return password;
 	}
+
 	public void setPassword(String password){
 		this.password = password;
 	}
